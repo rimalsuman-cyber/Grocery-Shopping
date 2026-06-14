@@ -10,7 +10,7 @@
     <title>Shopping List</title>
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="icon.svg" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=39" />
   </head>
   <body>
     <main class="app-shell">
@@ -33,6 +33,7 @@
           <span id="storeLabel">Any grocery store</span>
           <strong id="progressText">0 of 0 bought</strong>
         </div>
+        <div class="supermarket-list" id="supermarketList" aria-label="Supermarkets"></div>
         <div class="progress-track">
           <span id="progressBar"></span>
         </div>
@@ -57,7 +58,22 @@
             </svg>
           </button>
         </div>
-        <div class="chip-row" id="quickChips" aria-label="Quick item suggestions"></div>
+        <label class="suggestion-label" for="suggestionCategorySelect">
+          Category
+          <select id="suggestionCategorySelect">
+            <option value="Fruits">Fruits</option>
+            <option value="Vegetables">Vegetables</option>
+            <option value="Dairy">Dairy</option>
+            <option value="Drinks">Drinks</option>
+            <option value="Pantry">Pantry</option>
+            <option value="Household">Household</option>
+            <option value="Extra">Extra</option>
+          </select>
+        </label>
+        <label class="suggestion-label" for="quickItemSelect">
+          Item
+          <select id="quickItemSelect" aria-label="Quick item suggestions"></select>
+        </label>
       </section>
 
       <section class="reminder-panel" aria-label="Reminder settings">
@@ -68,7 +84,7 @@
           </svg>
           <div>
             <strong>Remind me</strong>
-            <span id="reminderSummary">Today at 5:30 PM</span>
+            <span id="reminderSummary">June 14 at 5:30 PM</span>
           </div>
         </div>
         <label class="switch">
@@ -103,8 +119,33 @@
           <input id="listNameInput" type="text" value="Weekly Groceries" />
         </label>
         <label>
-          Store
-          <input id="storeInput" type="text" value="Any grocery store" />
+          Supermarket
+          <select id="storeSelect">
+            <option value="Lidl">Lidl</option>
+            <option value="Aldi">Aldi</option>
+            <option value="Migros">Migros</option>
+            <option value="Coop">Coop</option>
+            <option value="Denner">Denner</option>
+            <option value="Lidl-DE">Lidl-DE</option>
+            <option value="Asian Store">Asian Store</option>
+            <option value="Turkish Store">Turkish Store</option>
+            <option value="NP-Store-BE">NP-Store-BE</option>
+          </select>
+        </label>
+        <label>
+          Measurement system
+          <select id="measurementSystemSelect">
+            <option value="eu">European</option>
+            <option value="us">US</option>
+          </select>
+        </label>
+        <label>
+          Reminder month
+          <select id="reminderMonthSelect"></select>
+        </label>
+        <label>
+          Reminder day
+          <select id="reminderDaySelect"></select>
         </label>
         <label>
           Reminder time
@@ -132,10 +173,16 @@
           </svg>
         </button>
         <div class="item-main">
-          <strong></strong>
-          <span></span>
+          <div class="item-title">
+            <strong></strong>
+            <input class="comment-toggle" type="checkbox" aria-label="Show item comment" />
+          </div>
+          <input class="item-comment-input" type="text" aria-label="Item comment" placeholder="Write comment" />
         </div>
-        <button class="quantity-chip" type="button"></button>
+        <div class="item-amount">
+          <input class="row-quantity-input" inputmode="decimal" type="text" aria-label="Item quantity" />
+          <select class="row-unit-select" aria-label="Item unit"></select>
+        </div>
         <button class="icon-button delete-button" type="button" aria-label="Delete item">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M3 6h18" />
@@ -148,6 +195,6 @@
       </div>
     </template>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=39"></script>
   </body>
 </html>
