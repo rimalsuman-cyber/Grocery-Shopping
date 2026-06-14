@@ -22,7 +22,7 @@
         <button class="icon-button" id="settingsButton" type="button" aria-label="Open settings">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" />
-            <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.05.05a2.05 2.05 0 0 1-2.9 2.9l-.05-.05A1.7 1.7 0 0 0 15 19.43a1.7 1.7 0 0 0-1 1.55V21a2 2 0 0 1-4 0v-.08a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.88.34l-.05.05a2.05 2.05 0 0 1-2.9-2.9l.05-.05A1.7 1.7 0 0 0 4.57 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 0 1 0-4h.08a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.88l-.05-.05a2.05 2.05 0 0 1 2.9-2.9l.05.05A1.7 1.7 0 0 0 9 4.57a1.7 1.7 0 0 0 1-1.55V3a2 2 0 0 1 4 0v.08a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.88-.34l.05-.05a2.05 2.05 0 0 1 2.9 2.9l-.05.05A1.7 1.7 0 0 0 19.43 9c.22.6.8 1 1.55 1H21a2 2 0 0 1 0 4h-.08a1.7 1.7 0 0 0-1.55 1Z" />
+            <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.05.05a2.05 2.05 0 0 1-2.9 2.9l-.05-.05A1.7 1.7 0 0 0 15 19.43a1.7 1.7 0 0 0-1 1.55V21a2 2 0 0 1-4 0v-.08a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.[...]
           </svg>
         </button>
       </header>
@@ -96,7 +96,11 @@
       <section class="list-area" aria-label="Shopping list">
         <div class="section-heading">
           <h2>Items</h2>
-          <button id="clearDoneButton" type="button">Clear Done</button>
+          <div class="button-group">
+            <button id="smsButton" type="button" aria-label="Send via SMS">SMS</button>
+            <button id="emailButton" type="button" aria-label="Send via Email">Email</button>
+            <button id="clearDoneButton" type="button">Clear Done</button>
+          </div>
         </div>
         <div id="categoryList" class="category-list"></div>
       </section>
@@ -130,6 +134,7 @@
             <option value="Asian Store">Asian Store</option>
             <option value="Turkish Store">Turkish Store</option>
             <option value="NP-Store-BE">NP-Store-BE</option>
+            <option value="Volg">Volg</option>
           </select>
         </label>
         <label>
