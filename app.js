@@ -124,7 +124,7 @@ const quickSuggestionsByCategory = {
   Extra: ["batteries", "flowers", "medicine", "candles", "tape", "gift card"],
 };
 let selectedMeasurementSystem = "eu";
-const defaultItems = [createItem("Milk"), createItem("Bananas"), createItem("Eggs")];
+const defaultItems = [];
 
 const state = loadState();
 
@@ -137,6 +137,8 @@ const categoryList = document.querySelector("#categoryList");
 const progressText = document.querySelector("#progressText");
 const progressBar = document.querySelector("#progressBar");
 const clearDoneButton = document.querySelector("#clearDoneButton");
+const smsButton = document.querySelector("#smsButton");
+const emailButton = document.querySelector("#emailButton");
 const reminderToggle = document.querySelector("#reminderToggle");
 const reminderSummary = document.querySelector("#reminderSummary");
 const settingsButton = document.querySelector("#settingsButton");
@@ -382,6 +384,68 @@ function groupedItems() {
   return order
     .map((category) => [category, currentItems().filter((item) => item.category === category)])
     .filter(([, items]) => items.length);
+}
+
+function formatShoppingList() {
+  const items = currentItems();
+  if (!items.length) return "No items in shopping list";
+  
+  const listByCategory = {};
+  items.forEach((item) => {
+    if (!listByCategory[item.category]) {
+      listByCategory[item.category] = [];
+    }
+    const quantity = item.quantity ? ` (${item.quantity})` : "";
+    listByCategory[item.category].push(`• ${item.name}${quantity}`);
+  });
+
+  const order = ["Fruits", "Vegetables", "Dairy", "Drinks", "Pantry", "Frozen", "Household", "Extra"];
+  let formatted = `${state.listName} - ${state.store}\n\n`;
+  
+  order.forEach((category) => {
+    if (listByCategory[category]) {
+      formatted += `${category}:\n`;
+      formatted += listByCategory[category].join("\n");
+      formatted += "\n\n";
+    }
+  });
+
+  return formatted.trim();
+}
+
+function sendSMS() {
+  const items = currentItems();
+  if (!items.length) {
+    alert("Please add items to your shopping list first");
+    return;
+  }
+
+  const phoneNumber = prompt("Enter phone number (with country code, e.g., +41791234567):", "");
+  if (!phoneNumber) return;
+
+  const message = formatShoppingList();
+  const encodedMessage = encodeURIComponent(message);
+  const smsLink = `sms:${phoneNumber}?body=${encodedMessage}`;
+  
+  window.location.href = smsLink;
+}
+
+function sendEmail() {
+  const items = currentItems();
+  if (!items.length) {
+    alert("Please add items to your shopping list first");
+    return;
+  }
+
+  const email = prompt("Enter recipient email address:", "");
+  if (!email) return;
+
+  const message = formatShoppingList();
+  const encodedMessage = encodeURIComponent(message);
+  const subject = encodeURIComponent(`${state.listName} - ${state.store}`);
+  const mailtoLink = `mailto:${email}?subject=${subject}&body=${encodedMessage}`;
+  
+  window.location.href = mailtoLink;
 }
 
 function render() {
@@ -665,6 +729,10 @@ clearDoneButton.addEventListener("click", () => {
   setCurrentItems(currentItems().filter((item) => !item.done));
   render();
 });
+
+smsButton.addEventListener("click", sendSMS);
+
+emailButton.addEventListener("click", sendEmail);
 
 reminderToggle.addEventListener("change", () => {
   currentReminder().enabled = reminderToggle.checked;
