@@ -1,5 +1,5 @@
 const STORAGE_KEY = "shopping-list-reminder:v1";
-const supermarkets = ["Lidl", "Aldi", "Migros", "Coop", "Denner", "Lidl-DE", "Asian Store", "Turkish Store", "NP-Store-BE", "Volg"];
+const supermarkets = ["Lidl", "Aldi", "Migros", "Coop", "Denner", "Lidl-DE", "Asian Store", "Turkish Store", "NP-Store-BE"];
 const monthNames = [
   "January",
   "February",
@@ -124,7 +124,7 @@ const quickSuggestionsByCategory = {
   Extra: ["batteries", "flowers", "medicine", "candles", "tape", "gift card"],
 };
 let selectedMeasurementSystem = "eu";
-const defaultItems = [];
+const defaultItems = [createItem("Milk"), createItem("Bananas"), createItem("Eggs")];
 
 const state = loadState();
 
@@ -389,63 +389,44 @@ function groupedItems() {
 function formatShoppingList() {
   const items = currentItems();
   if (!items.length) return "No items in shopping list";
-  
-  const listByCategory = {};
-  items.forEach((item) => {
-    if (!listByCategory[item.category]) {
-      listByCategory[item.category] = [];
-    }
-    const quantity = item.quantity ? ` (${item.quantity})` : "";
-    listByCategory[item.category].push(`• ${item.name}${quantity}`);
-  });
 
-  const order = ["Fruits", "Vegetables", "Dairy", "Drinks", "Pantry", "Frozen", "Household", "Extra"];
-  let formatted = `${state.listName} - ${state.store}\n\n`;
-  
-  order.forEach((category) => {
-    if (listByCategory[category]) {
-      formatted += `${category}:\n`;
-      formatted += listByCategory[category].join("\n");
-      formatted += "\n\n";
-    }
-  });
-
-  return formatted.trim();
+  return groupedItems()
+    .map(([category, categoryItems]) => {
+      const lines = categoryItems.map((item) => {
+        const quantity = item.quantity ? ` (${item.quantity})` : "";
+        const comment = item.comment ? ` - ${item.comment}` : "";
+        return `- ${item.name}${quantity}${comment}`;
+      });
+      return `${category}:\n${lines.join("\n")}`;
+    })
+    .join("\n\n");
 }
 
 function sendSMS() {
-  const items = currentItems();
-  if (!items.length) {
-    alert("Please add items to your shopping list first");
+  if (!currentItems().length) {
+    alert("Please add items to your shopping list first.");
     return;
   }
 
-  const phoneNumber = prompt("Enter phone number (with country code, e.g., +41791234567):", "");
+  const phoneNumber = prompt("Enter phone number:");
   if (!phoneNumber) return;
 
-  const message = formatShoppingList();
-  const encodedMessage = encodeURIComponent(message);
-  const smsLink = `sms:${phoneNumber}?body=${encodedMessage}`;
-  
-  window.location.href = smsLink;
+  const message = `${state.listName} - ${state.store}\n\n${formatShoppingList()}`;
+  window.location.href = `sms:${encodeURIComponent(phoneNumber)}?body=${encodeURIComponent(message)}`;
 }
 
 function sendEmail() {
-  const items = currentItems();
-  if (!items.length) {
-    alert("Please add items to your shopping list first");
+  if (!currentItems().length) {
+    alert("Please add items to your shopping list first.");
     return;
   }
 
-  const email = prompt("Enter recipient email address:", "");
+  const email = prompt("Enter recipient email:");
   if (!email) return;
 
-  const message = formatShoppingList();
-  const encodedMessage = encodeURIComponent(message);
   const subject = encodeURIComponent(`${state.listName} - ${state.store}`);
-  const mailtoLink = `mailto:${email}?subject=${subject}&body=${encodedMessage}`;
-  
-  window.location.href = mailtoLink;
+  const body = encodeURIComponent(formatShoppingList());
+  window.location.href = `mailto:${encodeURIComponent(email)}?subject=${subject}&body=${body}`;
 }
 
 function render() {
