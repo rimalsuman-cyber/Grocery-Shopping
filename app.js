@@ -1,5 +1,5 @@
 const STORAGE_KEY = "shopping-list-reminder:v1";
-const supermarkets = ["Lidl", "Aldi", "Migros", "Coop", "Denner", "Lidl-DE", "Asian Store", "Turkish Store", "NP-Store-BE"];
+const supermarkets = ["Lidl", "Aldi", "Migros", "Coop", "Denner", "Lidl-DE", "Asian Store", "Turkish Store", "NP-Store-BE", "Volg"];
 const monthNames = [
   "January",
   "February",
