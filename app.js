@@ -1,5 +1,17 @@
 const STORAGE_KEY = "shopping-list-reminder:v1";
-const supermarkets = ["Lidl", "Aldi", "Migros", "Coop", "Denner", "Lidl-DE", "Asian Store", "Turkish Store", "NP-Store-BE"];
+const supermarkets = [
+  "Lidl",
+  "Aldi",
+  "Migros",
+  "Coop",
+  "Denner",
+  "Lidl-DE",
+  "Asian Store",
+  "Turkish Store",
+  "NP-Store-BE",
+  "Volg",
+  "Agip",
+];
 const monthNames = [
   "January",
   "February",
@@ -23,6 +35,7 @@ const categoryRules = [
   ["Pantry", ["rice", "pasta", "flour", "sugar", "oil", "cereal", "coffee", "tea", "beans", "sauce", "bread"]],
   ["Frozen", ["frozen", "ice cream", "pizza"]],
   ["Household", ["soap", "towel", "paper", "detergent", "cleaner", "trash", "foil"]],
+  ["Petrol and Gas", ["petrol", "gas", "fuel", "diesel", "benzine", "gasoline", "oil change"]],
 ];
 
 const quantitySuggestionsBySystem = {
@@ -121,10 +134,11 @@ const quickSuggestionsByCategory = {
   Drinks: ["water", "juice", "soda", "cola", "lemonade", "beer", "wine"],
   Pantry: ["bread", "coffee", "rice", "pasta", "cereal", "beans", "oil", "tea"],
   Household: ["detergent", "soap", "paper towels", "trash bags", "cleaner", "foil"],
+  "Petrol and Gas": ["petrol", "gas", "diesel", "fuel", "benzine", "gasoline"],
   Extra: ["batteries", "flowers", "medicine", "candles", "tape", "gift card"],
 };
 let selectedMeasurementSystem = "eu";
-const defaultItems = [createItem("Milk"), createItem("Bananas"), createItem("Eggs")];
+const defaultItems = [];
 
 const state = loadState();
 
@@ -380,7 +394,7 @@ function pulseNotification() {
 }
 
 function groupedItems() {
-  const order = ["Fruits", "Vegetables", "Dairy", "Drinks", "Pantry", "Frozen", "Household", "Extra"];
+  const order = ["Fruits", "Vegetables", "Dairy", "Drinks", "Pantry", "Frozen", "Household", "Petrol and Gas", "Extra"];
   return order
     .map((category) => [category, currentItems().filter((item) => item.category === category)])
     .filter(([, items]) => items.length);
@@ -408,11 +422,8 @@ function sendSMS() {
     return;
   }
 
-  const phoneNumber = prompt("Enter phone number:");
-  if (!phoneNumber) return;
-
   const message = `${state.listName} - ${state.store}\n\n${formatShoppingList()}`;
-  window.location.href = `sms:${encodeURIComponent(phoneNumber)}?body=${encodeURIComponent(message)}`;
+  window.location.href = `sms:?body=${encodeURIComponent(message)}`;
 }
 
 function sendEmail() {
@@ -421,12 +432,9 @@ function sendEmail() {
     return;
   }
 
-  const email = prompt("Enter recipient email:");
-  if (!email) return;
-
   const subject = encodeURIComponent(`${state.listName} - ${state.store}`);
   const body = encodeURIComponent(formatShoppingList());
-  window.location.href = `mailto:${encodeURIComponent(email)}?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:?subject=${subject}&body=${body}`;
 }
 
 function render() {
