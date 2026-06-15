@@ -394,17 +394,20 @@ function pulseNotification() {
 }
 
 function groupedItems() {
+  return groupedItemsFor(currentItems());
+}
+
+function groupedItemsFor(items) {
   const order = ["Fruits", "Vegetables", "Dairy", "Drinks", "Pantry", "Frozen", "Household", "Petrol and Gas", "Extra"];
   return order
-    .map((category) => [category, currentItems().filter((item) => item.category === category)])
+    .map((category) => [category, items.filter((item) => item.category === category)])
     .filter(([, items]) => items.length);
 }
 
-function formatShoppingList() {
-  const items = currentItems();
+function formatStoreShoppingList(items) {
   if (!items.length) return "No items in shopping list";
 
-  return groupedItems()
+  return groupedItemsFor(items)
     .map(([category, categoryItems]) => {
       const lines = categoryItems.map((item) => {
         const quantity = item.quantity ? ` (${item.quantity})` : "";
@@ -416,23 +419,38 @@ function formatShoppingList() {
     .join("\n\n");
 }
 
+function storesWithItems() {
+  return supermarkets
+    .map((supermarket) => [supermarket, state.itemsByStore[supermarket] || []])
+    .filter(([, items]) => items.length);
+}
+
+function formatShoppingList() {
+  const storeEntries = storesWithItems();
+  if (!storeEntries.length) return "No items in shopping list";
+
+  return storeEntries
+    .map(([supermarket, items]) => `${supermarket}\n${formatStoreShoppingList(items)}`)
+    .join("\n\n");
+}
+
 function sendSMS() {
-  if (!currentItems().length) {
+  if (!storesWithItems().length) {
     alert("Please add items to your shopping list first.");
     return;
   }
 
-  const message = `${state.listName} - ${state.store}\n\n${formatShoppingList()}`;
+  const message = `${state.listName} - All Supermarkets\n\n${formatShoppingList()}`;
   window.location.href = `sms:?body=${encodeURIComponent(message)}`;
 }
 
 function sendEmail() {
-  if (!currentItems().length) {
+  if (!storesWithItems().length) {
     alert("Please add items to your shopping list first.");
     return;
   }
 
-  const subject = encodeURIComponent(`${state.listName} - ${state.store}`);
+  const subject = encodeURIComponent(`${state.listName} - All Supermarkets`);
   const body = encodeURIComponent(formatShoppingList());
   window.location.href = `mailto:?subject=${subject}&body=${body}`;
 }

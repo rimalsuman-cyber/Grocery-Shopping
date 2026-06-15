@@ -19,6 +19,8 @@
 html {
   min-height: 100%;
   background: var(--bg);
+  touch-action: manipulation;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -45,6 +47,8 @@ input,
 select,
 textarea {
   font: inherit;
+  font-size: 16px;
+  touch-action: manipulation;
 }
 
 button {
@@ -547,18 +551,18 @@ svg {
 .item-amount select {
   width: 100%;
   min-width: 0;
-  height: 36px;
+  height: 38px;
   border: 1px solid var(--line);
   border-radius: 999px;
   outline: none;
   color: var(--text);
   background: #fbfbf8;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
 }
 
 .item-amount input {
-  padding: 0 8px;
+  padding: 0 6px;
 }
 
 .row-quantity-input {
@@ -573,7 +577,7 @@ svg {
 }
 
 .item-amount select {
-  padding: 0 8px;
+  padding: 0 6px;
   appearance: none;
   text-align: center;
 }

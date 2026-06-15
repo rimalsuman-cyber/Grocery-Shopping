@@ -1,9 +1,9 @@
-const CACHE_NAME = "shopping-list-reminder-v45";
+const CACHE_NAME = "shopping-list-reminder-v48";
 const ASSETS = [
   "./",
   "./index.html",
-  "./styles.css?v=45",
-  "./app.js?v=45",
+  "./styles.css?v=48",
+  "./app.js?v=48",
   "./manifest.json",
   "./icon.svg",
 ];
