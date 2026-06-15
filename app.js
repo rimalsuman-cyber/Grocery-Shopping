@@ -137,6 +137,296 @@ const quickSuggestionsByCategory = {
   "Petrol and Gas": ["petrol", "gas", "diesel", "fuel", "benzine", "gasoline"],
   Extra: ["batteries", "flowers", "medicine", "candles", "tape", "gift card"],
 };
+const translations = {
+  en: {
+    appTitle: "Shopping List",
+    eyebrow: "Smart Add",
+    heading: "Shopping",
+    language: "Language",
+    english: "En",
+    italian: "It",
+    german: "De",
+    french: "Fr",
+    openSettings: "Open settings",
+    shoppingProgress: "Shopping progress",
+    supermarkets: "Supermarkets",
+    addShoppingItems: "Add shopping items",
+    addItems: "Add items",
+    itemPlaceholder: "milk, bananas, eggs",
+    voiceInput: "Use voice input",
+    category: "Category",
+    quickItemSuggestions: "Quick item suggestions",
+    reminderSettings: "Reminder settings",
+    remindMe: "Remind me",
+    shoppingList: "Shopping list",
+    items: "Items",
+    email: "Email",
+    clearDone: "Clear Done",
+    tripSettings: "Trip Settings",
+    closeSettings: "Close settings",
+    listName: "List name",
+    supermarket: "Supermarket",
+    measurementSystem: "Measurement system",
+    european: "European",
+    us: "US",
+    reminderMonth: "Reminder month",
+    reminderDay: "Reminder day",
+    reminderTime: "Reminder time",
+    saveSettings: "Save Settings",
+    toggleBought: "Toggle bought",
+    showItemComment: "Show item comment",
+    itemComment: "Item comment",
+    writeComment: "Write comment",
+    itemQuantity: "Item quantity",
+    itemUnit: "Item unit",
+    deleteItem: "Delete item",
+    bought: "bought",
+    off: "Off",
+    at: "at",
+    chooseItem: "Choose item",
+    left: "left",
+    allBought: "all bought",
+    leftToBuy: "left to buy",
+    noItems: "No items in shopping list",
+    allSupermarkets: "All Supermarkets",
+    addItemsFirst: "Please add items to your shopping list first.",
+    groupedEmpty: "Add a few {store} items and they will be grouped automatically.",
+    hide: "Hide",
+    show: "Show",
+    commentFor: "Comment for {item}",
+    voiceUnavailable: "Voice input is not available in this browser",
+    none: "none",
+    shoppingListFallback: "Shopping List",
+    categories: {
+      Fruits: "Fruits",
+      Vegetables: "Vegetables",
+      Dairy: "Dairy",
+      Drinks: "Drinks",
+      Pantry: "Pantry",
+      Frozen: "Frozen",
+      Household: "Household",
+      "Petrol and Gas": "Petrol and Gas",
+      Extra: "Extra",
+    },
+    months: monthNames,
+  },
+  it: {
+    appTitle: "Lista della spesa",
+    eyebrow: "Aggiunta rapida",
+    heading: "Spesa",
+    language: "Lingua",
+    english: "En",
+    italian: "It",
+    german: "De",
+    french: "Fr",
+    openSettings: "Apri impostazioni",
+    shoppingProgress: "Avanzamento spesa",
+    supermarkets: "Supermercati",
+    addShoppingItems: "Aggiungi articoli",
+    addItems: "Aggiungi articoli",
+    itemPlaceholder: "latte, banane, uova",
+    voiceInput: "Usa input vocale",
+    category: "Categoria",
+    quickItemSuggestions: "Suggerimenti rapidi",
+    reminderSettings: "Impostazioni promemoria",
+    remindMe: "Ricordamelo",
+    shoppingList: "Lista della spesa",
+    items: "Articoli",
+    email: "Email",
+    clearDone: "Cancella completati",
+    tripSettings: "Impostazioni spesa",
+    closeSettings: "Chiudi impostazioni",
+    listName: "Nome lista",
+    supermarket: "Supermercato",
+    measurementSystem: "Sistema di misura",
+    european: "Europeo",
+    us: "USA",
+    reminderMonth: "Mese promemoria",
+    reminderDay: "Giorno promemoria",
+    reminderTime: "Ora promemoria",
+    saveSettings: "Salva impostazioni",
+    toggleBought: "Segna acquistato",
+    showItemComment: "Mostra commento articolo",
+    itemComment: "Commento articolo",
+    writeComment: "Scrivi commento",
+    itemQuantity: "Quantita articolo",
+    itemUnit: "Unita articolo",
+    deleteItem: "Elimina articolo",
+    bought: "acquistati",
+    off: "Spento",
+    at: "alle",
+    chooseItem: "Scegli articolo",
+    left: "rimasti",
+    allBought: "tutto acquistato",
+    leftToBuy: "da acquistare",
+    noItems: "Nessun articolo nella lista",
+    allSupermarkets: "Tutti i supermercati",
+    addItemsFirst: "Aggiungi prima articoli alla lista della spesa.",
+    groupedEmpty: "Aggiungi alcuni articoli per {store} e verranno raggruppati automaticamente.",
+    hide: "Nascondi",
+    show: "Mostra",
+    commentFor: "Commento per {item}",
+    voiceUnavailable: "Input vocale non disponibile in questo browser",
+    none: "nessuno",
+    shoppingListFallback: "Lista della spesa",
+    categories: {
+      Fruits: "Frutta",
+      Vegetables: "Verdura",
+      Dairy: "Latticini",
+      Drinks: "Bevande",
+      Pantry: "Dispensa",
+      Frozen: "Surgelati",
+      Household: "Casa",
+      "Petrol and Gas": "Benzina e gas",
+      Extra: "Extra",
+    },
+    months: ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"],
+  },
+  de: {
+    appTitle: "Einkaufsliste",
+    eyebrow: "Schnell hinzufugen",
+    heading: "Einkaufen",
+    language: "Sprache",
+    english: "En",
+    italian: "It",
+    german: "De",
+    french: "Fr",
+    openSettings: "Einstellungen offnen",
+    shoppingProgress: "Einkaufsfortschritt",
+    supermarkets: "Supermarkte",
+    addShoppingItems: "Artikel hinzufugen",
+    addItems: "Artikel hinzufugen",
+    itemPlaceholder: "Milch, Bananen, Eier",
+    voiceInput: "Spracheingabe verwenden",
+    category: "Kategorie",
+    quickItemSuggestions: "Schnelle Vorschlage",
+    reminderSettings: "Erinnerungseinstellungen",
+    remindMe: "Erinnere mich",
+    shoppingList: "Einkaufsliste",
+    items: "Artikel",
+    email: "E-Mail",
+    clearDone: "Erledigte loschen",
+    tripSettings: "Einkaufseinstellungen",
+    closeSettings: "Einstellungen schliessen",
+    listName: "Listenname",
+    supermarket: "Supermarkt",
+    measurementSystem: "Masssystem",
+    european: "Europaisch",
+    us: "US",
+    reminderMonth: "Erinnerungsmonat",
+    reminderDay: "Erinnerungstag",
+    reminderTime: "Erinnerungszeit",
+    saveSettings: "Einstellungen speichern",
+    toggleBought: "Gekauft umschalten",
+    showItemComment: "Artikelkommentar anzeigen",
+    itemComment: "Artikelkommentar",
+    writeComment: "Kommentar schreiben",
+    itemQuantity: "Artikelmenge",
+    itemUnit: "Artikeleinheit",
+    deleteItem: "Artikel loschen",
+    bought: "gekauft",
+    off: "Aus",
+    at: "um",
+    chooseItem: "Artikel wahlen",
+    left: "ubrig",
+    allBought: "alles gekauft",
+    leftToBuy: "zu kaufen",
+    noItems: "Keine Artikel in der Einkaufsliste",
+    allSupermarkets: "Alle Supermarkte",
+    addItemsFirst: "Bitte zuerst Artikel zur Einkaufsliste hinzufugen.",
+    groupedEmpty: "Fuge ein paar Artikel fur {store} hinzu, sie werden automatisch gruppiert.",
+    hide: "Ausblenden",
+    show: "Anzeigen",
+    commentFor: "Kommentar fur {item}",
+    voiceUnavailable: "Spracheingabe ist in diesem Browser nicht verfugbar",
+    none: "keine",
+    shoppingListFallback: "Einkaufsliste",
+    categories: {
+      Fruits: "Obst",
+      Vegetables: "Gemuse",
+      Dairy: "Milchprodukte",
+      Drinks: "Getranke",
+      Pantry: "Vorrat",
+      Frozen: "Tiefkuhlkost",
+      Household: "Haushalt",
+      "Petrol and Gas": "Benzin und Gas",
+      Extra: "Extra",
+    },
+    months: ["Januar", "Februar", "Marz", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
+  },
+  fr: {
+    appTitle: "Liste de courses",
+    eyebrow: "Ajout rapide",
+    heading: "Courses",
+    language: "Langue",
+    english: "En",
+    italian: "It",
+    german: "De",
+    french: "Fr",
+    openSettings: "Ouvrir les reglages",
+    shoppingProgress: "Progression des courses",
+    supermarkets: "Supermarches",
+    addShoppingItems: "Ajouter des articles",
+    addItems: "Ajouter des articles",
+    itemPlaceholder: "lait, bananes, oeufs",
+    voiceInput: "Utiliser la saisie vocale",
+    category: "Categorie",
+    quickItemSuggestions: "Suggestions rapides",
+    reminderSettings: "Reglages du rappel",
+    remindMe: "Me le rappeler",
+    shoppingList: "Liste de courses",
+    items: "Articles",
+    email: "E-mail",
+    clearDone: "Effacer achetes",
+    tripSettings: "Reglages des courses",
+    closeSettings: "Fermer les reglages",
+    listName: "Nom de la liste",
+    supermarket: "Supermarche",
+    measurementSystem: "Systeme de mesure",
+    european: "Europeen",
+    us: "US",
+    reminderMonth: "Mois du rappel",
+    reminderDay: "Jour du rappel",
+    reminderTime: "Heure du rappel",
+    saveSettings: "Enregistrer",
+    toggleBought: "Marquer comme achete",
+    showItemComment: "Afficher le commentaire",
+    itemComment: "Commentaire",
+    writeComment: "Ecrire un commentaire",
+    itemQuantity: "Quantite",
+    itemUnit: "Unite",
+    deleteItem: "Supprimer l'article",
+    bought: "achetes",
+    off: "Desactive",
+    at: "a",
+    chooseItem: "Choisir un article",
+    left: "restants",
+    allBought: "tout achete",
+    leftToBuy: "a acheter",
+    noItems: "Aucun article dans la liste",
+    allSupermarkets: "Tous les supermarches",
+    addItemsFirst: "Veuillez d'abord ajouter des articles a votre liste.",
+    groupedEmpty: "Ajoutez quelques articles pour {store} et ils seront regroupes automatiquement.",
+    hide: "Masquer",
+    show: "Afficher",
+    commentFor: "Commentaire pour {item}",
+    voiceUnavailable: "La saisie vocale n'est pas disponible dans ce navigateur",
+    none: "aucun",
+    shoppingListFallback: "Liste de courses",
+    categories: {
+      Fruits: "Fruits",
+      Vegetables: "Legumes",
+      Dairy: "Produits laitiers",
+      Drinks: "Boissons",
+      Pantry: "Epicerie",
+      Frozen: "Surgeles",
+      Household: "Maison",
+      "Petrol and Gas": "Essence et gaz",
+      Extra: "Extra",
+    },
+    months: ["Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre"],
+  },
+};
 let selectedMeasurementSystem = "eu";
 const defaultItems = [];
 
@@ -153,6 +443,7 @@ const progressBar = document.querySelector("#progressBar");
 const clearDoneButton = document.querySelector("#clearDoneButton");
 const smsButton = document.querySelector("#smsButton");
 const emailButton = document.querySelector("#emailButton");
+const languageSelect = document.querySelector("#languageSelect");
 const reminderToggle = document.querySelector("#reminderToggle");
 const reminderSummary = document.querySelector("#reminderSummary");
 const settingsButton = document.querySelector("#settingsButton");
@@ -181,6 +472,7 @@ function loadState() {
   const fallback = {
     listName: "Weekly Groceries",
     store: "Migros",
+    language: "en",
     measurementSystem: "eu",
     remindersByStore: {
       Migros: defaultReminder,
@@ -192,6 +484,7 @@ function loadState() {
 
   try {
     const loaded = { ...fallback, ...JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}") };
+    loaded.language = translations[loaded.language] ? loaded.language : "en";
     loaded.measurementSystem = ["eu", "us"].includes(loaded.measurementSystem) ? loaded.measurementSystem : "eu";
     selectedMeasurementSystem = loaded.measurementSystem;
     if (loaded.store === "AsianStore") loaded.store = "Asian Store";
@@ -257,6 +550,20 @@ function saveState() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
 }
 
+function t(key, replacements = {}) {
+  const value = translations[state.language]?.[key] ?? translations.en[key] ?? key;
+  if (typeof value !== "string") return value;
+  return Object.entries(replacements).reduce((text, [name, replacement]) => text.replace(`{${name}}`, replacement), value);
+}
+
+function translatedCategory(category) {
+  return translations[state.language]?.categories?.[category] ?? translations.en.categories[category] ?? category;
+}
+
+function translatedMonths() {
+  return translations[state.language]?.months || monthNames;
+}
+
 function currentItems() {
   if (!Array.isArray(state.itemsByStore[state.store])) {
     state.itemsByStore[state.store] = [];
@@ -319,7 +626,7 @@ function populateUnitSelect(select, selectedUnit) {
   unitOptions().forEach((unit) => {
     const option = document.createElement("option");
     option.value = unit;
-    option.textContent = unit || "none";
+    option.textContent = unit || t("none");
     select.append(option);
   });
   if ([...select.options].some((option) => option.value === selectedUnit)) {
@@ -405,7 +712,7 @@ function groupedItemsFor(items) {
 }
 
 function formatStoreShoppingList(items) {
-  if (!items.length) return "No items in shopping list";
+  if (!items.length) return t("noItems");
 
   return groupedItemsFor(items)
     .map(([category, categoryItems]) => {
@@ -414,7 +721,7 @@ function formatStoreShoppingList(items) {
         const comment = item.comment ? ` - ${item.comment}` : "";
         return `- ${item.name}${quantity}${comment}`;
       });
-      return `${category}:\n${lines.join("\n")}`;
+      return `${translatedCategory(category)}:\n${lines.join("\n")}`;
     })
     .join("\n\n");
 }
@@ -427,7 +734,7 @@ function storesWithItems() {
 
 function formatShoppingList() {
   const storeEntries = storesWithItems();
-  if (!storeEntries.length) return "No items in shopping list";
+  if (!storeEntries.length) return t("noItems");
 
   return storeEntries
     .map(([supermarket, items]) => `${supermarket}\n${formatStoreShoppingList(items)}`)
@@ -436,32 +743,60 @@ function formatShoppingList() {
 
 function sendSMS() {
   if (!storesWithItems().length) {
-    alert("Please add items to your shopping list first.");
+    alert(t("addItemsFirst"));
     return;
   }
 
-  const message = `${state.listName} - All Supermarkets\n\n${formatShoppingList()}`;
+  const message = `${state.listName} - ${t("allSupermarkets")}\n\n${formatShoppingList()}`;
   window.location.href = `sms:?body=${encodeURIComponent(message)}`;
 }
 
 function sendEmail() {
   if (!storesWithItems().length) {
-    alert("Please add items to your shopping list first.");
+    alert(t("addItemsFirst"));
     return;
   }
 
-  const subject = encodeURIComponent(`${state.listName} - All Supermarkets`);
+  const subject = encodeURIComponent(`${state.listName} - ${t("allSupermarkets")}`);
   const body = encodeURIComponent(formatShoppingList());
   window.location.href = `mailto:?subject=${subject}&body=${body}`;
 }
 
 function render() {
   saveState();
+  renderTranslations();
   renderSummary();
   renderSupermarkets();
   renderReminderDateOptions();
   renderItemDropdown();
   renderItems();
+}
+
+function renderTranslations() {
+  document.documentElement.lang = state.language;
+  document.title = t("appTitle");
+  languageSelect.value = state.language;
+  languageSelect.setAttribute("aria-label", t("language"));
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    element.textContent = t(element.dataset.i18n);
+  });
+  document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+    element.setAttribute("aria-label", t(element.dataset.i18nAriaLabel));
+  });
+  settingsButton.setAttribute("aria-label", t("openSettings"));
+  document.querySelector(".summary-band").setAttribute("aria-label", t("shoppingProgress"));
+  supermarketList.setAttribute("aria-label", t("supermarkets"));
+  voiceButton.setAttribute("aria-label", t("voiceInput"));
+  addButton.setAttribute("aria-label", t("addItems"));
+  quickItemSelect.setAttribute("aria-label", t("quickItemSuggestions"));
+  document.querySelector(".reminder-panel").setAttribute("aria-label", t("reminderSettings"));
+  document.querySelector(".list-area").setAttribute("aria-label", t("shoppingList"));
+  document.querySelector(".button-row").setAttribute("aria-label", t("shoppingList"));
+  closeSettingsButton.setAttribute("aria-label", t("closeSettings"));
+  itemInput.placeholder = t("itemPlaceholder");
+  [...suggestionCategorySelect.options].forEach((option) => {
+    option.textContent = translatedCategory(option.value);
+  });
 }
 
 function renderSummary() {
@@ -473,12 +808,12 @@ function renderSummary() {
 
   tripLabel.textContent = state.listName;
   storeLabel.textContent = state.store;
-  progressText.textContent = `${done} of ${total} bought`;
+  progressText.textContent = `${done} of ${total} ${t("bought")}`;
   progressBar.style.width = `${percent}%`;
   reminderToggle.checked = reminder.enabled;
   reminderSummary.textContent = reminder.enabled
-    ? `${monthNames[reminder.month - 1]} ${reminder.day} at ${formatTime(reminder.time)}`
-    : "Off";
+    ? `${translatedMonths()[reminder.month - 1]} ${reminder.day} ${t("at")} ${formatTime(reminder.time)}`
+    : t("off");
   listNameInput.value = state.listName;
   storeSelect.value = supermarkets.includes(state.store) ? state.store : "Migros";
   measurementSystemSelect.value = state.measurementSystem;
@@ -490,13 +825,15 @@ function renderSummary() {
 function renderReminderDateOptions() {
   const reminder = currentReminder();
   if (!reminderMonthSelect.children.length) {
-    monthNames.forEach((month, index) => {
+    monthNames.forEach((_, index) => {
       const option = document.createElement("option");
       option.value = String(index + 1);
-      option.textContent = month;
       reminderMonthSelect.append(option);
     });
   }
+  [...reminderMonthSelect.options].forEach((option, index) => {
+    option.textContent = translatedMonths()[index];
+  });
 
   const selectedMonth = normalizeMonth(reminderMonthSelect.value || reminder.month, reminder.month);
   const maxDay = daysInMonth(selectedMonth);
@@ -543,7 +880,7 @@ function renderSupermarkets() {
     pill.type = "button";
     pill.setAttribute(
       "aria-label",
-      remaining > 0 ? `${supermarket}, ${remaining} item${remaining === 1 ? "" : "s"} left to buy` : `${supermarket}, all bought`
+      remaining > 0 ? `${supermarket}, ${remaining} ${t("leftToBuy")}` : `${supermarket}, ${t("allBought")}`
     );
 
     const name = document.createElement("span");
@@ -570,7 +907,8 @@ function formatTime(value) {
   const [hour, minute] = value.split(":").map(Number);
   const date = new Date();
   date.setHours(hour, minute, 0, 0);
-  return date.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+  const locales = { en: "en-US", it: "it-IT", de: "de-DE", fr: "fr-FR" };
+  return date.toLocaleTimeString(locales[state.language] || [], { hour: "numeric", minute: "2-digit" });
 }
 
 function renderItemDropdown() {
@@ -579,7 +917,7 @@ function renderItemDropdown() {
 
   const placeholder = document.createElement("option");
   placeholder.value = "";
-  placeholder.textContent = "Choose item";
+  placeholder.textContent = t("chooseItem");
   quickItemSelect.append(placeholder);
 
   suggestions.forEach((suggestion) => {
@@ -596,7 +934,7 @@ function renderItems() {
   if (!currentItems().length) {
     const empty = document.createElement("p");
     empty.className = "empty-state";
-    empty.textContent = `Add a few ${state.store} items and they will be grouped automatically.`;
+    empty.textContent = t("groupedEmpty", { store: state.store });
     categoryList.append(empty);
     return;
   }
@@ -609,8 +947,8 @@ function renderItems() {
     const count = header.querySelector("small");
     const itemsNode = categoryNode.querySelector(".items");
 
-    title.textContent = categoryName;
-    count.textContent = `${items.filter((item) => !item.done).length} left`;
+    title.textContent = translatedCategory(categoryName);
+    count.textContent = `${items.filter((item) => !item.done).length} ${t("left")}`;
 
     header.addEventListener("click", () => {
       itemsNode.hidden = !itemsNode.hidden;
@@ -643,8 +981,13 @@ function renderItem(item) {
   commentInput.value = item.comment || "";
   commentInput.hidden = !item.commentVisible;
   commentToggle.checked = item.commentVisible;
-  commentToggle.setAttribute("aria-label", `${item.commentVisible ? "Hide" : "Show"} comment for ${item.name}`);
-  commentInput.placeholder = `Comment for ${item.name}`;
+  check.setAttribute("aria-label", t("toggleBought"));
+  commentToggle.setAttribute("aria-label", `${item.commentVisible ? t("hide") : t("show")} ${t("commentFor", { item: item.name })}`);
+  commentInput.setAttribute("aria-label", t("itemComment"));
+  commentInput.placeholder = t("commentFor", { item: item.name });
+  rowQuantityInput.setAttribute("aria-label", t("itemQuantity"));
+  rowUnitSelect.setAttribute("aria-label", t("itemUnit"));
+  del.setAttribute("aria-label", t("deleteItem"));
   rowQuantityInput.value = quantityParts.amount;
   populateUnitSelect(rowUnitSelect, quantityParts.unit);
 
@@ -674,7 +1017,7 @@ function renderItem(item) {
   commentToggle.addEventListener("change", () => {
     item.commentVisible = commentToggle.checked;
     commentInput.hidden = !item.commentVisible;
-    commentToggle.setAttribute("aria-label", `${item.commentVisible ? "Hide" : "Show"} comment for ${item.name}`);
+    commentToggle.setAttribute("aria-label", `${item.commentVisible ? t("hide") : t("show")} ${t("commentFor", { item: item.name })}`);
     saveState();
     if (item.commentVisible) {
       commentInput.focus();
@@ -702,7 +1045,7 @@ itemInput.addEventListener("keydown", (event) => {
 voiceButton.addEventListener("click", () => {
   const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
   if (!SpeechRecognition) {
-    itemInput.placeholder = "Voice input is not available in this browser";
+    itemInput.placeholder = t("voiceUnavailable");
     return;
   }
 
@@ -723,6 +1066,11 @@ quickItemSelect.addEventListener("change", () => {
   itemInput.value = itemInput.value ? `${itemInput.value}, ${suggestion}` : suggestion;
   quickItemSelect.value = "";
   itemInput.focus();
+});
+
+languageSelect.addEventListener("change", () => {
+  state.language = languageSelect.value;
+  render();
 });
 
 measurementSystemSelect.addEventListener("change", () => {
@@ -760,7 +1108,7 @@ settingsForm.addEventListener("submit", (event) => {
 
 saveSettingsButton.addEventListener("click", (event) => {
   event.preventDefault();
-  state.listName = listNameInput.value.trim() || "Shopping List";
+  state.listName = listNameInput.value.trim() || t("shoppingListFallback");
   state.store = storeSelect.value;
   state.measurementSystem = measurementSystemSelect.value;
   selectedMeasurementSystem = state.measurementSystem;
