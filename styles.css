@@ -70,6 +70,45 @@ button {
   margin-bottom: 18px;
 }
 
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.language-select {
+  display: grid;
+}
+
+.language-select span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.language-select select {
+  width: 112px;
+  height: 44px;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  outline: none;
+  padding: 0 28px 0 12px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.72);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.language-select select:focus {
+  border-color: rgba(47, 143, 91, 0.55);
+  box-shadow: 0 0 0 4px rgba(47, 143, 91, 0.12);
+}
+
 .eyebrow {
   margin: 0 0 3px;
   color: var(--green);
@@ -631,6 +670,21 @@ svg {
     width: 42px;
     height: 42px;
     flex-basis: 42px;
+  }
+
+  .top-bar {
+    gap: 10px;
+  }
+
+  .top-actions {
+    gap: 6px;
+  }
+
+  .language-select select {
+    width: 98px;
+    height: 42px;
+    padding-right: 24px;
+    padding-left: 10px;
   }
 
   .reminder-panel {
