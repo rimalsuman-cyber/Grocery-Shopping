@@ -22,11 +22,19 @@
         <div class="top-actions">
           <label class="language-select" for="languageSelect">
             <span data-i18n="language">Language</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M3 12h18" />
+              <path d="M12 3a14 14 0 0 1 0 18" />
+              <path d="M12 3a14 14 0 0 0 0 18" />
+            </svg>
             <select id="languageSelect" aria-label="Language">
-              <option value="en" data-i18n="english" selected>En</option>
-              <option value="it" data-i18n="italian">It</option>
-              <option value="de" data-i18n="german">De</option>
-              <option value="fr" data-i18n="french">Fr</option>
+              <option value="en" data-i18n="english" selected>EN</option>
+              <option value="it" data-i18n="italian">IT</option>
+              <option value="de" data-i18n="german">DE</option>
+              <option value="fr" data-i18n="french">FR</option>
+              <option value="tr" data-i18n="turkish">TR</option>
+              <option value="sq" data-i18n="albanian">SQ</option>
             </select>
           </label>
           <button class="icon-button" id="settingsButton" type="button" aria-label="Open settings">
@@ -213,6 +221,12 @@
       </div>
     </template>
 
-    <script src="app.js?v=51"></script>
+    <script src="languages/en.js?v=52"></script>
+    <script src="languages/it.js?v=52"></script>
+    <script src="languages/de.js?v=52"></script>
+    <script src="languages/fr.js?v=52"></script>
+    <script src="languages/tr.js?v=52"></script>
+    <script src="languages/sq.js?v=52"></script>
+    <script src="app.js?v=52"></script>
   </body>
 </html>

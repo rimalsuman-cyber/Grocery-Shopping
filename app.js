@@ -137,296 +137,7 @@ const quickSuggestionsByCategory = {
   "Petrol and Gas": ["petrol", "gas", "diesel", "fuel", "benzine", "gasoline"],
   Extra: ["batteries", "flowers", "medicine", "candles", "tape", "gift card"],
 };
-const translations = {
-  en: {
-    appTitle: "Shopping List",
-    eyebrow: "Smart Add",
-    heading: "Shopping",
-    language: "Language",
-    english: "En",
-    italian: "It",
-    german: "De",
-    french: "Fr",
-    openSettings: "Open settings",
-    shoppingProgress: "Shopping progress",
-    supermarkets: "Supermarkets",
-    addShoppingItems: "Add shopping items",
-    addItems: "Add items",
-    itemPlaceholder: "milk, bananas, eggs",
-    voiceInput: "Use voice input",
-    category: "Category",
-    quickItemSuggestions: "Quick item suggestions",
-    reminderSettings: "Reminder settings",
-    remindMe: "Remind me",
-    shoppingList: "Shopping list",
-    items: "Items",
-    email: "Email",
-    clearDone: "Clear Done",
-    tripSettings: "Trip Settings",
-    closeSettings: "Close settings",
-    listName: "List name",
-    supermarket: "Supermarket",
-    measurementSystem: "Measurement system",
-    european: "European",
-    us: "US",
-    reminderMonth: "Reminder month",
-    reminderDay: "Reminder day",
-    reminderTime: "Reminder time",
-    saveSettings: "Save Settings",
-    toggleBought: "Toggle bought",
-    showItemComment: "Show item comment",
-    itemComment: "Item comment",
-    writeComment: "Write comment",
-    itemQuantity: "Item quantity",
-    itemUnit: "Item unit",
-    deleteItem: "Delete item",
-    bought: "bought",
-    off: "Off",
-    at: "at",
-    chooseItem: "Choose item",
-    left: "left",
-    allBought: "all bought",
-    leftToBuy: "left to buy",
-    noItems: "No items in shopping list",
-    allSupermarkets: "All Supermarkets",
-    addItemsFirst: "Please add items to your shopping list first.",
-    groupedEmpty: "Add a few {store} items and they will be grouped automatically.",
-    hide: "Hide",
-    show: "Show",
-    commentFor: "Comment for {item}",
-    voiceUnavailable: "Voice input is not available in this browser",
-    none: "none",
-    shoppingListFallback: "Shopping List",
-    categories: {
-      Fruits: "Fruits",
-      Vegetables: "Vegetables",
-      Dairy: "Dairy",
-      Drinks: "Drinks",
-      Pantry: "Pantry",
-      Frozen: "Frozen",
-      Household: "Household",
-      "Petrol and Gas": "Petrol and Gas",
-      Extra: "Extra",
-    },
-    months: monthNames,
-  },
-  it: {
-    appTitle: "Lista della spesa",
-    eyebrow: "Aggiunta rapida",
-    heading: "Spesa",
-    language: "Lingua",
-    english: "En",
-    italian: "It",
-    german: "De",
-    french: "Fr",
-    openSettings: "Apri impostazioni",
-    shoppingProgress: "Avanzamento spesa",
-    supermarkets: "Supermercati",
-    addShoppingItems: "Aggiungi articoli",
-    addItems: "Aggiungi articoli",
-    itemPlaceholder: "latte, banane, uova",
-    voiceInput: "Usa input vocale",
-    category: "Categoria",
-    quickItemSuggestions: "Suggerimenti rapidi",
-    reminderSettings: "Impostazioni promemoria",
-    remindMe: "Ricordamelo",
-    shoppingList: "Lista della spesa",
-    items: "Articoli",
-    email: "Email",
-    clearDone: "Cancella completati",
-    tripSettings: "Impostazioni spesa",
-    closeSettings: "Chiudi impostazioni",
-    listName: "Nome lista",
-    supermarket: "Supermercato",
-    measurementSystem: "Sistema di misura",
-    european: "Europeo",
-    us: "USA",
-    reminderMonth: "Mese promemoria",
-    reminderDay: "Giorno promemoria",
-    reminderTime: "Ora promemoria",
-    saveSettings: "Salva impostazioni",
-    toggleBought: "Segna acquistato",
-    showItemComment: "Mostra commento articolo",
-    itemComment: "Commento articolo",
-    writeComment: "Scrivi commento",
-    itemQuantity: "Quantita articolo",
-    itemUnit: "Unita articolo",
-    deleteItem: "Elimina articolo",
-    bought: "acquistati",
-    off: "Spento",
-    at: "alle",
-    chooseItem: "Scegli articolo",
-    left: "rimasti",
-    allBought: "tutto acquistato",
-    leftToBuy: "da acquistare",
-    noItems: "Nessun articolo nella lista",
-    allSupermarkets: "Tutti i supermercati",
-    addItemsFirst: "Aggiungi prima articoli alla lista della spesa.",
-    groupedEmpty: "Aggiungi alcuni articoli per {store} e verranno raggruppati automaticamente.",
-    hide: "Nascondi",
-    show: "Mostra",
-    commentFor: "Commento per {item}",
-    voiceUnavailable: "Input vocale non disponibile in questo browser",
-    none: "nessuno",
-    shoppingListFallback: "Lista della spesa",
-    categories: {
-      Fruits: "Frutta",
-      Vegetables: "Verdura",
-      Dairy: "Latticini",
-      Drinks: "Bevande",
-      Pantry: "Dispensa",
-      Frozen: "Surgelati",
-      Household: "Casa",
-      "Petrol and Gas": "Benzina e gas",
-      Extra: "Extra",
-    },
-    months: ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"],
-  },
-  de: {
-    appTitle: "Einkaufsliste",
-    eyebrow: "Schnell hinzufugen",
-    heading: "Einkaufen",
-    language: "Sprache",
-    english: "En",
-    italian: "It",
-    german: "De",
-    french: "Fr",
-    openSettings: "Einstellungen offnen",
-    shoppingProgress: "Einkaufsfortschritt",
-    supermarkets: "Supermarkte",
-    addShoppingItems: "Artikel hinzufugen",
-    addItems: "Artikel hinzufugen",
-    itemPlaceholder: "Milch, Bananen, Eier",
-    voiceInput: "Spracheingabe verwenden",
-    category: "Kategorie",
-    quickItemSuggestions: "Schnelle Vorschlage",
-    reminderSettings: "Erinnerungseinstellungen",
-    remindMe: "Erinnere mich",
-    shoppingList: "Einkaufsliste",
-    items: "Artikel",
-    email: "E-Mail",
-    clearDone: "Erledigte loschen",
-    tripSettings: "Einkaufseinstellungen",
-    closeSettings: "Einstellungen schliessen",
-    listName: "Listenname",
-    supermarket: "Supermarkt",
-    measurementSystem: "Masssystem",
-    european: "Europaisch",
-    us: "US",
-    reminderMonth: "Erinnerungsmonat",
-    reminderDay: "Erinnerungstag",
-    reminderTime: "Erinnerungszeit",
-    saveSettings: "Einstellungen speichern",
-    toggleBought: "Gekauft umschalten",
-    showItemComment: "Artikelkommentar anzeigen",
-    itemComment: "Artikelkommentar",
-    writeComment: "Kommentar schreiben",
-    itemQuantity: "Artikelmenge",
-    itemUnit: "Artikeleinheit",
-    deleteItem: "Artikel loschen",
-    bought: "gekauft",
-    off: "Aus",
-    at: "um",
-    chooseItem: "Artikel wahlen",
-    left: "ubrig",
-    allBought: "alles gekauft",
-    leftToBuy: "zu kaufen",
-    noItems: "Keine Artikel in der Einkaufsliste",
-    allSupermarkets: "Alle Supermarkte",
-    addItemsFirst: "Bitte zuerst Artikel zur Einkaufsliste hinzufugen.",
-    groupedEmpty: "Fuge ein paar Artikel fur {store} hinzu, sie werden automatisch gruppiert.",
-    hide: "Ausblenden",
-    show: "Anzeigen",
-    commentFor: "Kommentar fur {item}",
-    voiceUnavailable: "Spracheingabe ist in diesem Browser nicht verfugbar",
-    none: "keine",
-    shoppingListFallback: "Einkaufsliste",
-    categories: {
-      Fruits: "Obst",
-      Vegetables: "Gemuse",
-      Dairy: "Milchprodukte",
-      Drinks: "Getranke",
-      Pantry: "Vorrat",
-      Frozen: "Tiefkuhlkost",
-      Household: "Haushalt",
-      "Petrol and Gas": "Benzin und Gas",
-      Extra: "Extra",
-    },
-    months: ["Januar", "Februar", "Marz", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
-  },
-  fr: {
-    appTitle: "Liste de courses",
-    eyebrow: "Ajout rapide",
-    heading: "Courses",
-    language: "Langue",
-    english: "En",
-    italian: "It",
-    german: "De",
-    french: "Fr",
-    openSettings: "Ouvrir les reglages",
-    shoppingProgress: "Progression des courses",
-    supermarkets: "Supermarches",
-    addShoppingItems: "Ajouter des articles",
-    addItems: "Ajouter des articles",
-    itemPlaceholder: "lait, bananes, oeufs",
-    voiceInput: "Utiliser la saisie vocale",
-    category: "Categorie",
-    quickItemSuggestions: "Suggestions rapides",
-    reminderSettings: "Reglages du rappel",
-    remindMe: "Me le rappeler",
-    shoppingList: "Liste de courses",
-    items: "Articles",
-    email: "E-mail",
-    clearDone: "Effacer achetes",
-    tripSettings: "Reglages des courses",
-    closeSettings: "Fermer les reglages",
-    listName: "Nom de la liste",
-    supermarket: "Supermarche",
-    measurementSystem: "Systeme de mesure",
-    european: "Europeen",
-    us: "US",
-    reminderMonth: "Mois du rappel",
-    reminderDay: "Jour du rappel",
-    reminderTime: "Heure du rappel",
-    saveSettings: "Enregistrer",
-    toggleBought: "Marquer comme achete",
-    showItemComment: "Afficher le commentaire",
-    itemComment: "Commentaire",
-    writeComment: "Ecrire un commentaire",
-    itemQuantity: "Quantite",
-    itemUnit: "Unite",
-    deleteItem: "Supprimer l'article",
-    bought: "achetes",
-    off: "Desactive",
-    at: "a",
-    chooseItem: "Choisir un article",
-    left: "restants",
-    allBought: "tout achete",
-    leftToBuy: "a acheter",
-    noItems: "Aucun article dans la liste",
-    allSupermarkets: "Tous les supermarches",
-    addItemsFirst: "Veuillez d'abord ajouter des articles a votre liste.",
-    groupedEmpty: "Ajoutez quelques articles pour {store} et ils seront regroupes automatiquement.",
-    hide: "Masquer",
-    show: "Afficher",
-    commentFor: "Commentaire pour {item}",
-    voiceUnavailable: "La saisie vocale n'est pas disponible dans ce navigateur",
-    none: "aucun",
-    shoppingListFallback: "Liste de courses",
-    categories: {
-      Fruits: "Fruits",
-      Vegetables: "Legumes",
-      Dairy: "Produits laitiers",
-      Drinks: "Boissons",
-      Pantry: "Epicerie",
-      Frozen: "Surgeles",
-      Household: "Maison",
-      "Petrol and Gas": "Essence et gaz",
-      Extra: "Extra",
-    },
-    months: ["Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre"],
-  },
-};
+const translations = window.shoppingTranslations || {};
 let selectedMeasurementSystem = "eu";
 const defaultItems = [];
 
@@ -560,8 +271,27 @@ function translatedCategory(category) {
   return translations[state.language]?.categories?.[category] ?? translations.en.categories[category] ?? category;
 }
 
+function translatedItemName(itemName) {
+  const key = itemName.toLowerCase();
+  return translations[state.language]?.itemNames?.[key] ?? translations.en.itemNames?.[key] ?? itemName;
+}
+
 function translatedMonths() {
   return translations[state.language]?.months || monthNames;
+}
+
+function defaultListNames() {
+  return Object.values(translations)
+    .map((translation) => translation.weeklyGroceries)
+    .filter(Boolean);
+}
+
+function isDefaultListName(listName) {
+  return listName === "Weekly Groceries" || defaultListNames().includes(listName);
+}
+
+function displayListName() {
+  return isDefaultListName(state.listName) ? t("weeklyGroceries") : state.listName;
 }
 
 function currentItems() {
@@ -716,12 +446,12 @@ function formatStoreShoppingList(items) {
 
   return groupedItemsFor(items)
     .map(([category, categoryItems]) => {
-      const lines = categoryItems.map((item) => {
+      const lines = categoryItems.map((item, index) => {
         const quantity = item.quantity ? ` (${item.quantity})` : "";
         const comment = item.comment ? ` - ${item.comment}` : "";
-        return `- ${item.name}${quantity}${comment}`;
+        return `${index + 1}. ${translatedItemName(item.name)}${quantity}${comment}`;
       });
-      return `${translatedCategory(category)}:\n${lines.join("\n")}`;
+      return `🟩 ${translatedCategory(category)}:\n${lines.join("\n")}`;
     })
     .join("\n\n");
 }
@@ -737,8 +467,16 @@ function formatShoppingList() {
   if (!storeEntries.length) return t("noItems");
 
   return storeEntries
-    .map(([supermarket, items]) => `${supermarket}\n${formatStoreShoppingList(items)}`)
+    .map(([supermarket, items]) => `🔴 ${supermarket}\n${formatStoreShoppingList(items)}`)
     .join("\n\n");
+}
+
+function shoppingListMessage() {
+  return `${displayListName()} - ${t("allSupermarkets")}\n\n${formatShoppingList()}`;
+}
+
+function smsBodySeparator() {
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) ? "&" : "?";
 }
 
 function sendSMS() {
@@ -747,8 +485,7 @@ function sendSMS() {
     return;
   }
 
-  const message = `${state.listName} - ${t("allSupermarkets")}\n\n${formatShoppingList()}`;
-  window.location.href = `sms:?body=${encodeURIComponent(message)}`;
+  window.location.href = `sms:${smsBodySeparator()}body=${encodeURIComponent(shoppingListMessage())}`;
 }
 
 function sendEmail() {
@@ -757,8 +494,8 @@ function sendEmail() {
     return;
   }
 
-  const subject = encodeURIComponent(`${state.listName} - ${t("allSupermarkets")}`);
-  const body = encodeURIComponent(formatShoppingList());
+  const subject = encodeURIComponent(`${displayListName()} - ${t("allSupermarkets")}`);
+  const body = encodeURIComponent(shoppingListMessage());
   window.location.href = `mailto:?subject=${subject}&body=${body}`;
 }
 
@@ -806,7 +543,7 @@ function renderSummary() {
   const done = items.filter((item) => item.done).length;
   const percent = total ? Math.round((done / total) * 100) : 0;
 
-  tripLabel.textContent = state.listName;
+  tripLabel.textContent = displayListName();
   storeLabel.textContent = state.store;
   progressText.textContent = `${done} of ${total} ${t("bought")}`;
   progressBar.style.width = `${percent}%`;
@@ -814,7 +551,7 @@ function renderSummary() {
   reminderSummary.textContent = reminder.enabled
     ? `${translatedMonths()[reminder.month - 1]} ${reminder.day} ${t("at")} ${formatTime(reminder.time)}`
     : t("off");
-  listNameInput.value = state.listName;
+  listNameInput.value = displayListName();
   storeSelect.value = supermarkets.includes(state.store) ? state.store : "Migros";
   measurementSystemSelect.value = state.measurementSystem;
   reminderMonthSelect.value = String(reminder.month);
@@ -907,7 +644,7 @@ function formatTime(value) {
   const [hour, minute] = value.split(":").map(Number);
   const date = new Date();
   date.setHours(hour, minute, 0, 0);
-  const locales = { en: "en-US", it: "it-IT", de: "de-DE", fr: "fr-FR" };
+  const locales = { en: "en-US", it: "it-IT", de: "de-DE", fr: "fr-FR", tr: "tr-TR", sq: "sq-AL" };
   return date.toLocaleTimeString(locales[state.language] || [], { hour: "numeric", minute: "2-digit" });
 }
 
@@ -923,7 +660,7 @@ function renderItemDropdown() {
   suggestions.forEach((suggestion) => {
     const option = document.createElement("option");
     option.value = suggestion;
-    option.textContent = suggestion;
+    option.textContent = translatedItemName(suggestion);
     quickItemSelect.append(option);
   });
 }
@@ -975,16 +712,17 @@ function renderItem(item) {
   const rowUnitSelect = node.querySelector(".row-unit-select");
   const del = node.querySelector(".delete-button");
   const quantityParts = parseQuantityParts(item.quantity);
+  const displayName = translatedItemName(item.name);
 
   row.classList.toggle("done", item.done);
-  name.textContent = item.name;
+  name.textContent = displayName;
   commentInput.value = item.comment || "";
   commentInput.hidden = !item.commentVisible;
   commentToggle.checked = item.commentVisible;
   check.setAttribute("aria-label", t("toggleBought"));
-  commentToggle.setAttribute("aria-label", `${item.commentVisible ? t("hide") : t("show")} ${t("commentFor", { item: item.name })}`);
+  commentToggle.setAttribute("aria-label", `${item.commentVisible ? t("hide") : t("show")} ${t("commentFor", { item: displayName })}`);
   commentInput.setAttribute("aria-label", t("itemComment"));
-  commentInput.placeholder = t("commentFor", { item: item.name });
+  commentInput.placeholder = t("commentFor", { item: displayName });
   rowQuantityInput.setAttribute("aria-label", t("itemQuantity"));
   rowUnitSelect.setAttribute("aria-label", t("itemUnit"));
   del.setAttribute("aria-label", t("deleteItem"));
@@ -1017,7 +755,7 @@ function renderItem(item) {
   commentToggle.addEventListener("change", () => {
     item.commentVisible = commentToggle.checked;
     commentInput.hidden = !item.commentVisible;
-    commentToggle.setAttribute("aria-label", `${item.commentVisible ? t("hide") : t("show")} ${t("commentFor", { item: item.name })}`);
+    commentToggle.setAttribute("aria-label", `${item.commentVisible ? t("hide") : t("show")} ${t("commentFor", { item: displayName })}`);
     saveState();
     if (item.commentVisible) {
       commentInput.focus();
